@@ -2,9 +2,9 @@
 <html lang="zh-Hans">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>西窗 · 灯下读诗</title>
-  <meta name="description" content="西窗——唐诗宋词，灯下读诗，与古人夜话。" />
+  <meta name="description" content="西窗——唐诗宋词，一首一屏，灯下读诗，与古人夜话。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;900&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet" />
@@ -17,23 +17,11 @@
     <span class="ico-sun" aria-hidden="true">☼</span>
   </button>
 
-  <header class="masthead">
-    <div class="wordmark">
-      <span class="seal" aria-hidden="true">西<br />窗</span>
-      <h1 class="brand">西窗</h1>
-      <p class="latin">XICHUANG</p>
-    </div>
-    <p class="slogan">灯下读诗，与古人夜话</p>
-    <p class="source">「何当共剪西窗烛，却话巴山夜雨时」</p>
-  </header>
+  <!-- 右侧页点导航 -->
+  <nav id="dots" class="dots" aria-label="翻页"></nav>
 
-  <main id="scroll" class="scroll" aria-label="诗词"></main>
-
-  <footer class="colophon">
-    <span class="rule" aria-hidden="true"></span>
-    <p>西窗 · xichuang.ink</p>
-    <p class="tiny">唐诗宋词　选录</p>
-  </footer>
+  <!-- 全屏诗卡 deck（封面 / 每首一屏 / 落款 由脚本注入） -->
+  <main id="deck" class="deck" tabindex="0" aria-label="诗词"></main>
 
   <script src="assets/poems.js"></script>
   <script src="assets/app.js"></script>
