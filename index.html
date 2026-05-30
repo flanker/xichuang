@@ -4,24 +4,32 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>西窗 · 灯下读诗</title>
-  <meta name="description" content="西窗——唐诗宋词，一首一屏，灯下读诗，与古人夜话。" />
+  <meta name="description" content="西窗——唐诗宋词，竖排右读，灯下读诗，与古人夜话。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;900&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <!-- 主题切换：月（夜窗）/ 烛（宣纸） -->
   <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切换昼夜">
     <span class="ico-moon" aria-hidden="true">☾</span>
     <span class="ico-sun" aria-hidden="true">☼</span>
   </button>
 
-  <!-- 右侧页点导航 -->
-  <nav id="dots" class="dots" aria-label="翻页"></nav>
+  <div class="layout">
+    <!-- 左：导航 -->
+    <aside class="sidebar">
+      <a class="brand-mini" href="#" aria-label="西窗">
+        <span class="seal" aria-hidden="true">西<br />窗</span>
+        <span class="brand-text">西窗<small>XICHUANG</small></span>
+      </a>
+      <nav id="nav" class="nav" aria-label="诗词目录"></nav>
+      <p class="side-foot">xichuang.ink</p>
+    </aside>
 
-  <!-- 全屏诗卡 deck（封面 / 每首一屏 / 落款 由脚本注入） -->
-  <main id="deck" class="deck" tabindex="0" aria-label="诗词"></main>
+    <!-- 右：竖排阅读 -->
+    <main id="reader" class="reader" aria-live="polite"></main>
+  </div>
 
   <script src="assets/poems.js"></script>
   <script src="assets/app.js"></script>
